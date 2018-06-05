@@ -85,7 +85,7 @@ twig:
 assetic:
     debug: '%kernel.debug%'
     use_controller: '%kernel.debug%'
-    bundles: [ EzPlatformAdminUiBundle ]
+    bundles: [ EzPlatformAdminUiBundle, EzPlatformUserBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -137,5 +137,11 @@ jms_translation:
             dirs:
                 - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src'
             output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src/bundle/Resources/translations/'
+            excluded_dirs: [Behat, Tests]
+            output_format: "xliff"
+        user:
+            dirs:
+                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-user/src'
+            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-user/src/bundle/Resources/translations/'
             excluded_dirs: [Behat, Tests]
             output_format: "xliff"

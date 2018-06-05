@@ -25,6 +25,9 @@ ezplatform.admin_ui:
     defaults:
         siteaccess_group_whitelist: '%admin_group_name%'
 
+ezplatform.user:
+    resource: '@EzPlatformUserBundle/Resources/config/routing.yml'
+
 _ezplatformRepositoryFormsRoutes:
     resource: '@EzSystemsRepositoryFormsBundle/Resources/config/routing.yml'
 
